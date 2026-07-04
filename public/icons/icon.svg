@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="B-Done icon">
+  <rect width="512" height="512" rx="96" fill="#0f9f7a"/>
+  <path d="M150 178h212l-17 220a42 42 0 0 1-42 39h-94a42 42 0 0 1-42-39l-17-220Z" fill="#f7fbf8"/>
+  <path d="M184 142a36 36 0 0 1 36-36h72a36 36 0 0 1 36 36h54v52H130v-52h54Z" fill="#10231f"/>
+  <path d="M222 318l-43-43 31-31 22 22 73-78 32 30-105 113a15 15 0 0 1-10 5 15 15 0 0 1-10-4Z" fill="#f3c442"/>
+</svg>

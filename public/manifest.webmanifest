@@ -1,0 +1,29 @@
+﻿{
+  "id": ".",
+  "name": "B-Done",
+  "short_name": "B-Done",
+  "description": "Promemoria porta a porta per il corretto conferimento dei rifiuti.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f7fbf8",
+  "theme_color": "#0f9f7a",
+  "orientation": "portrait",
+  "categories": ["utilities", "productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Calendario",
+      "short_name": "Calendario",
+      "url": "./?tab=calendar",
+      "description": "Apri i prossimi ritiri"
+    }
+  ]
+}
