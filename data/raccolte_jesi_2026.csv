@@ -1,47 +1,837 @@
 date,zona,rifiuto,note,is_variazione,is_doppio_ritiro
 2026-01-02,residenziale,plastica,,false,false
+2026-01-02,periferia_ovest,plastica,,false,false
+2026-01-02,industriale,plastica,,false,false
 2026-01-03,residenziale,organico,,false,false
+2026-01-03,periferia_ovest,organico,,false,false
+2026-01-03,industriale,organico,,false,false
 2026-01-05,residenziale,carta,,false,false
-2026-01-08,residenziale,vetro,,false,false
-2026-01-09,residenziale,secco,,false,false
+2026-01-05,periferia_ovest,carta,,false,false
+2026-01-05,industriale,indifferenziato,,false,false
+2026-01-07,residenziale,indifferenziato,,false,false
+2026-01-07,periferia_ovest,indifferenziato,,false,false
+2026-01-07,industriale,"organico,vetro",Variazione calendario - Doppio ritiro,true,true
+2026-01-08,residenziale,organico,Variazione calendario,true,false
+2026-01-08,periferia_ovest,organico,Variazione calendario,true,false
+2026-01-08,industriale,carta,Variazione calendario,true,false
+2026-01-09,residenziale,plastica,,false,false
+2026-01-09,periferia_ovest,plastica,,false,false
+2026-01-09,industriale,plastica,Variazione calendario,true,false
+2026-01-10,residenziale,organico,,false,false
+2026-01-10,periferia_ovest,organico,,false,false
+2026-01-10,industriale,organico,Variazione calendario,true,false
+2026-01-12,residenziale,carta,,false,false
+2026-01-12,periferia_ovest,carta,,false,false
+2026-01-12,industriale,indifferenziato,,false,false
+2026-01-13,residenziale,organico,,false,false
+2026-01-13,periferia_ovest,organico,,false,false
+2026-01-13,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-01-14,residenziale,indifferenziato,,false,false
+2026-01-14,periferia_ovest,indifferenziato,,false,false
+2026-01-14,industriale,carta,,false,false
+2026-01-15,residenziale,vetro,,false,false
+2026-01-15,periferia_ovest,vetro,,false,false
+2026-01-15,industriale,plastica,,false,false
+2026-01-16,residenziale,plastica,,false,false
+2026-01-16,periferia_ovest,plastica,,false,false
+2026-01-16,industriale,organico,,false,false
+2026-01-17,residenziale,organico,,false,false
+2026-01-17,periferia_ovest,organico,,false,false
+2026-01-19,residenziale,carta,,false,false
+2026-01-19,periferia_ovest,carta,,false,false
+2026-01-19,industriale,indifferenziato,,false,false
+2026-01-20,residenziale,organico,,false,false
+2026-01-20,periferia_ovest,organico,,false,false
+2026-01-20,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-01-21,residenziale,indifferenziato,,false,false
+2026-01-21,periferia_ovest,indifferenziato,,false,false
+2026-01-21,industriale,carta,,false,false
+2026-01-22,industriale,plastica,,false,false
+2026-01-23,residenziale,plastica,,false,false
+2026-01-23,periferia_ovest,plastica,,false,false
+2026-01-23,industriale,organico,,false,false
+2026-01-24,residenziale,organico,,false,false
+2026-01-24,periferia_ovest,organico,,false,false
+2026-01-26,residenziale,carta,,false,false
+2026-01-26,periferia_ovest,carta,,false,false
+2026-01-26,industriale,indifferenziato,,false,false
+2026-01-27,residenziale,organico,,false,false
+2026-01-27,periferia_ovest,organico,,false,false
+2026-01-27,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-01-28,residenziale,indifferenziato,,false,false
+2026-01-28,periferia_ovest,indifferenziato,,false,false
+2026-01-28,industriale,carta,,false,false
+2026-01-29,residenziale,vetro,,false,false
+2026-01-29,periferia_ovest,vetro,,false,false
+2026-01-29,industriale,plastica,,false,false
+2026-01-30,residenziale,plastica,,false,false
+2026-01-30,periferia_ovest,plastica,,false,false
+2026-01-30,industriale,organico,,false,false
+2026-01-31,residenziale,organico,,false,false
+2026-01-31,periferia_ovest,organico,,false,false
+2026-02-02,residenziale,carta,,false,false
+2026-02-02,periferia_ovest,carta,,false,false
+2026-02-02,industriale,indifferenziato,,false,false
+2026-02-03,residenziale,organico,,false,false
+2026-02-03,periferia_ovest,organico,,false,false
+2026-02-03,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-02-04,residenziale,indifferenziato,,false,false
+2026-02-04,periferia_ovest,indifferenziato,,false,false
+2026-02-04,industriale,carta,,false,false
+2026-02-05,industriale,plastica,,false,false
+2026-02-06,residenziale,plastica,,false,false
+2026-02-06,periferia_ovest,plastica,,false,false
+2026-02-06,industriale,organico,,false,false
+2026-02-07,residenziale,organico,,false,false
+2026-02-07,periferia_ovest,organico,,false,false
+2026-02-09,residenziale,carta,,false,false
+2026-02-09,periferia_ovest,carta,,false,false
+2026-02-09,industriale,indifferenziato,,false,false
+2026-02-10,residenziale,organico,,false,false
+2026-02-10,periferia_ovest,organico,,false,false
+2026-02-10,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-02-11,residenziale,indifferenziato,,false,false
+2026-02-11,periferia_ovest,indifferenziato,,false,false
+2026-02-11,industriale,carta,,false,false
+2026-02-12,residenziale,vetro,,false,false
+2026-02-12,periferia_ovest,vetro,,false,false
+2026-02-12,industriale,plastica,,false,false
+2026-02-13,residenziale,plastica,,false,false
+2026-02-13,periferia_ovest,plastica,,false,false
+2026-02-13,industriale,organico,,false,false
+2026-02-14,residenziale,organico,,false,false
+2026-02-14,periferia_ovest,organico,,false,false
+2026-02-16,residenziale,carta,,false,false
+2026-02-16,periferia_ovest,carta,,false,false
+2026-02-16,industriale,indifferenziato,,false,false
+2026-02-17,residenziale,organico,,false,false
+2026-02-17,periferia_ovest,organico,,false,false
+2026-02-17,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-02-18,residenziale,indifferenziato,,false,false
+2026-02-18,periferia_ovest,indifferenziato,,false,false
+2026-02-18,industriale,carta,,false,false
+2026-02-19,industriale,plastica,,false,false
+2026-02-20,residenziale,plastica,,false,false
+2026-02-20,periferia_ovest,plastica,,false,false
+2026-02-20,industriale,organico,,false,false
+2026-02-21,residenziale,organico,,false,false
+2026-02-21,periferia_ovest,organico,,false,false
+2026-02-23,residenziale,carta,,false,false
+2026-02-23,periferia_ovest,carta,,false,false
+2026-02-23,industriale,indifferenziato,,false,false
+2026-02-24,residenziale,organico,,false,false
+2026-02-24,periferia_ovest,organico,,false,false
+2026-02-24,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-02-25,residenziale,indifferenziato,,false,false
+2026-02-25,periferia_ovest,indifferenziato,,false,false
+2026-02-25,industriale,carta,,false,false
+2026-02-26,residenziale,vetro,,false,false
+2026-02-26,periferia_ovest,vetro,,false,false
+2026-02-26,industriale,plastica,,false,false
+2026-02-27,residenziale,plastica,,false,false
+2026-02-27,periferia_ovest,plastica,,false,false
+2026-02-27,industriale,organico,,false,false
+2026-02-28,residenziale,organico,,false,false
+2026-02-28,periferia_ovest,organico,,false,false
+2026-03-02,residenziale,carta,,false,false
+2026-03-02,periferia_ovest,carta,,false,false
+2026-03-02,industriale,indifferenziato,,false,false
+2026-03-03,residenziale,organico,,false,false
+2026-03-03,periferia_ovest,organico,,false,false
+2026-03-03,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-03-04,residenziale,indifferenziato,,false,false
+2026-03-04,periferia_ovest,indifferenziato,,false,false
+2026-03-04,industriale,carta,,false,false
+2026-03-05,industriale,plastica,,false,false
+2026-03-06,residenziale,plastica,,false,false
+2026-03-06,periferia_ovest,plastica,,false,false
+2026-03-06,industriale,organico,,false,false
+2026-03-07,residenziale,organico,,false,false
+2026-03-07,periferia_ovest,organico,,false,false
+2026-03-09,residenziale,carta,,false,false
+2026-03-09,periferia_ovest,carta,,false,false
+2026-03-09,industriale,indifferenziato,,false,false
+2026-03-10,residenziale,organico,,false,false
+2026-03-10,periferia_ovest,organico,,false,false
+2026-03-10,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-03-11,residenziale,indifferenziato,,false,false
+2026-03-11,periferia_ovest,indifferenziato,,false,false
+2026-03-11,industriale,carta,,false,false
+2026-03-12,residenziale,vetro,,false,false
+2026-03-12,periferia_ovest,vetro,,false,false
+2026-03-12,industriale,plastica,,false,false
+2026-03-13,residenziale,plastica,,false,false
+2026-03-13,periferia_ovest,plastica,,false,false
+2026-03-13,industriale,organico,,false,false
+2026-03-14,residenziale,organico,,false,false
+2026-03-14,periferia_ovest,organico,,false,false
+2026-03-16,residenziale,carta,,false,false
+2026-03-16,periferia_ovest,carta,,false,false
+2026-03-16,industriale,indifferenziato,,false,false
+2026-03-17,residenziale,organico,,false,false
+2026-03-17,periferia_ovest,organico,,false,false
+2026-03-17,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-03-18,residenziale,indifferenziato,,false,false
+2026-03-18,periferia_ovest,indifferenziato,,false,false
+2026-03-18,industriale,carta,,false,false
+2026-03-19,industriale,plastica,,false,false
+2026-03-20,residenziale,plastica,,false,false
+2026-03-20,periferia_ovest,plastica,,false,false
+2026-03-20,industriale,organico,,false,false
+2026-03-21,residenziale,organico,,false,false
+2026-03-21,periferia_ovest,organico,,false,false
+2026-03-23,residenziale,carta,,false,false
+2026-03-23,periferia_ovest,carta,,false,false
+2026-03-23,industriale,indifferenziato,,false,false
+2026-03-24,residenziale,organico,,false,false
+2026-03-24,periferia_ovest,organico,,false,false
+2026-03-24,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-03-25,residenziale,indifferenziato,,false,false
+2026-03-25,periferia_ovest,indifferenziato,,false,false
+2026-03-25,industriale,carta,,false,false
+2026-03-26,residenziale,vetro,,false,false
+2026-03-26,periferia_ovest,vetro,,false,false
+2026-03-26,industriale,plastica,,false,false
+2026-03-27,residenziale,plastica,,false,false
+2026-03-27,periferia_ovest,plastica,,false,false
+2026-03-27,industriale,organico,,false,false
+2026-03-28,residenziale,organico,,false,false
+2026-03-28,periferia_ovest,organico,,false,false
+2026-03-30,residenziale,carta,,false,false
+2026-03-30,periferia_ovest,carta,,false,false
+2026-03-30,industriale,indifferenziato,,false,false
+2026-03-31,residenziale,organico,,false,false
+2026-03-31,periferia_ovest,organico,,false,false
+2026-03-31,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-04-01,residenziale,indifferenziato,,false,false
+2026-04-01,periferia_ovest,indifferenziato,,false,false
+2026-04-01,industriale,carta,,false,false
+2026-04-02,residenziale,vetro,,false,false
+2026-04-02,periferia_ovest,vetro,,false,false
+2026-04-02,industriale,plastica,,false,false
+2026-04-03,residenziale,plastica,,false,false
+2026-04-03,periferia_ovest,plastica,,false,false
+2026-04-03,industriale,organico,,false,false
+2026-04-04,residenziale,organico,,false,false
+2026-04-04,periferia_ovest,organico,,false,false
+2026-04-07,residenziale,carta,Variazione calendario,true,false
+2026-04-07,periferia_ovest,carta,Variazione calendario,true,false
+2026-04-07,industriale,indifferenziato,Variazione calendario,true,false
+2026-04-08,residenziale,organico,Variazione calendario,true,false
+2026-04-08,periferia_ovest,organico,Variazione calendario,true,false
+2026-04-08,industriale,"organico,vetro",Variazione calendario - Doppio ritiro,true,true
+2026-04-09,residenziale,indifferenziato,Variazione calendario,true,false
+2026-04-09,periferia_ovest,indifferenziato,Variazione calendario,true,false
+2026-04-09,industriale,carta,Variazione calendario,true,false
+2026-04-10,residenziale,plastica,,false,false
+2026-04-10,periferia_ovest,plastica,,false,false
+2026-04-10,industriale,plastica,Variazione calendario,true,false
+2026-04-11,residenziale,organico,,false,false
+2026-04-11,periferia_ovest,organico,,false,false
+2026-04-11,industriale,organico,Variazione calendario,true,false
+2026-04-13,residenziale,carta,,false,false
+2026-04-13,periferia_ovest,carta,,false,false
+2026-04-13,industriale,indifferenziato,,false,false
+2026-04-14,residenziale,organico,,false,false
+2026-04-14,periferia_ovest,organico,,false,false
+2026-04-14,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-04-15,residenziale,indifferenziato,,false,false
+2026-04-15,periferia_ovest,indifferenziato,,false,false
+2026-04-15,industriale,carta,,false,false
+2026-04-16,residenziale,vetro,,false,false
+2026-04-16,periferia_ovest,vetro,,false,false
+2026-04-16,industriale,plastica,,false,false
+2026-04-17,residenziale,plastica,,false,false
+2026-04-17,periferia_ovest,plastica,,false,false
+2026-04-17,industriale,organico,,false,false
+2026-04-18,residenziale,organico,,false,false
+2026-04-18,periferia_ovest,organico,,false,false
+2026-04-20,residenziale,carta,,false,false
+2026-04-20,periferia_ovest,carta,,false,false
+2026-04-20,industriale,indifferenziato,,false,false
+2026-04-21,residenziale,organico,,false,false
+2026-04-21,periferia_ovest,organico,,false,false
+2026-04-21,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-04-22,residenziale,indifferenziato,,false,false
+2026-04-22,periferia_ovest,indifferenziato,,false,false
+2026-04-22,industriale,carta,,false,false
+2026-04-23,residenziale,organico,Variazione calendario,true,false
+2026-04-23,periferia_ovest,organico,Variazione calendario,true,false
+2026-04-23,industriale,plastica,,false,false
+2026-04-24,residenziale,plastica,,false,false
+2026-04-24,periferia_ovest,plastica,,false,false
+2026-04-24,industriale,organico,,false,false
+2026-04-27,residenziale,carta,,false,false
+2026-04-27,periferia_ovest,carta,,false,false
+2026-04-27,industriale,indifferenziato,,false,false
+2026-04-28,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-04-28,periferia_ovest,organico,,false,false
+2026-04-28,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-04-29,residenziale,indifferenziato,,false,false
+2026-04-29,periferia_ovest,indifferenziato,,false,false
+2026-04-29,industriale,carta,,false,false
+2026-04-30,residenziale,plastica,Variazione calendario,true,false
+2026-04-30,periferia_ovest,"vetro,plastica",Doppio ritiro,false,true
+2026-04-30,industriale,plastica,,false,false
+2026-05-02,residenziale,organico,,false,false
+2026-05-02,periferia_ovest,organico,,false,false
+2026-05-02,industriale,organico,,false,false
+2026-05-04,residenziale,carta,,false,false
+2026-05-04,periferia_ovest,carta,,false,false
+2026-05-04,industriale,indifferenziato,,false,false
+2026-05-05,residenziale,organico,,false,false
+2026-05-05,periferia_ovest,organico,,false,false
+2026-05-05,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-05-06,residenziale,indifferenziato,,false,false
+2026-05-06,periferia_ovest,indifferenziato,,false,false
+2026-05-06,industriale,carta,,false,false
+2026-05-07,industriale,plastica,,false,false
+2026-05-08,residenziale,plastica,,false,false
+2026-05-08,periferia_ovest,plastica,,false,false
+2026-05-08,industriale,organico,,false,false
+2026-05-09,residenziale,organico,,false,false
+2026-05-09,periferia_ovest,organico,,false,false
+2026-05-11,residenziale,carta,,false,false
+2026-05-11,periferia_ovest,carta,,false,false
+2026-05-11,industriale,indifferenziato,,false,false
+2026-05-12,residenziale,organico,,false,false
+2026-05-12,periferia_ovest,organico,,false,false
+2026-05-12,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-05-13,residenziale,indifferenziato,,false,false
+2026-05-13,periferia_ovest,indifferenziato,,false,false
+2026-05-13,industriale,carta,,false,false
+2026-05-14,residenziale,vetro,,false,false
+2026-05-14,periferia_ovest,vetro,,false,false
+2026-05-14,industriale,plastica,,false,false
+2026-05-15,residenziale,plastica,,false,false
+2026-05-15,periferia_ovest,plastica,,false,false
+2026-05-15,industriale,organico,,false,false
+2026-05-16,residenziale,organico,,false,false
+2026-05-16,periferia_ovest,organico,,false,false
+2026-05-18,residenziale,carta,,false,false
+2026-05-18,periferia_ovest,carta,,false,false
+2026-05-18,industriale,indifferenziato,,false,false
+2026-05-19,residenziale,organico,,false,false
+2026-05-19,periferia_ovest,organico,,false,false
+2026-05-19,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-05-20,residenziale,indifferenziato,,false,false
+2026-05-20,periferia_ovest,indifferenziato,,false,false
+2026-05-20,industriale,carta,,false,false
+2026-05-21,industriale,plastica,,false,false
+2026-05-22,residenziale,plastica,,false,false
+2026-05-22,periferia_ovest,plastica,,false,false
+2026-05-22,industriale,organico,,false,false
+2026-05-23,residenziale,organico,,false,false
+2026-05-23,periferia_ovest,organico,,false,false
+2026-05-25,residenziale,carta,,false,false
+2026-05-25,periferia_ovest,carta,,false,false
+2026-05-25,industriale,indifferenziato,,false,false
+2026-05-26,residenziale,organico,,false,false
+2026-05-26,periferia_ovest,organico,,false,false
+2026-05-26,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-05-27,residenziale,indifferenziato,,false,false
+2026-05-27,periferia_ovest,indifferenziato,,false,false
+2026-05-27,industriale,carta,,false,false
+2026-05-28,residenziale,vetro,,false,false
+2026-05-28,periferia_ovest,vetro,,false,false
+2026-05-28,industriale,plastica,,false,false
+2026-05-29,residenziale,plastica,,false,false
+2026-05-29,periferia_ovest,plastica,,false,false
+2026-05-29,industriale,organico,,false,false
+2026-05-30,residenziale,organico,,false,false
+2026-05-30,periferia_ovest,organico,,false,false
+2026-06-01,residenziale,carta,,false,false
+2026-06-01,periferia_ovest,carta,,false,false
+2026-06-01,industriale,indifferenziato,,false,false
+2026-06-03,residenziale,organico,Variazione calendario,true,false
+2026-06-03,periferia_ovest,organico,Variazione calendario,true,false
+2026-06-03,industriale,"organico,vetro",Variazione calendario - Doppio ritiro,true,true
+2026-06-04,residenziale,indifferenziato,Variazione calendario,true,false
+2026-06-04,periferia_ovest,indifferenziato,Variazione calendario,true,false
+2026-06-04,industriale,carta,Variazione calendario,true,false
+2026-06-05,residenziale,plastica,,false,false
+2026-06-05,periferia_ovest,plastica,,false,false
+2026-06-05,industriale,plastica,Variazione calendario,true,false
+2026-06-06,residenziale,organico,,false,false
+2026-06-06,periferia_ovest,organico,,false,false
+2026-06-06,industriale,organico,Variazione calendario,true,false
+2026-06-08,residenziale,carta,,false,false
+2026-06-08,periferia_ovest,carta,,false,false
+2026-06-08,industriale,indifferenziato,,false,false
+2026-06-09,residenziale,organico,,false,false
+2026-06-09,periferia_ovest,organico,,false,false
+2026-06-09,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-06-10,residenziale,indifferenziato,,false,false
+2026-06-10,periferia_ovest,indifferenziato,,false,false
+2026-06-10,industriale,carta,,false,false
+2026-06-11,residenziale,vetro,,false,false
+2026-06-11,periferia_ovest,vetro,,false,false
+2026-06-11,industriale,plastica,,false,false
+2026-06-12,residenziale,plastica,,false,false
+2026-06-12,periferia_ovest,plastica,,false,false
+2026-06-12,industriale,organico,,false,false
+2026-06-13,residenziale,organico,,false,false
+2026-06-13,periferia_ovest,organico,,false,false
+2026-06-15,residenziale,carta,,false,false
+2026-06-15,periferia_ovest,carta,,false,false
+2026-06-15,industriale,indifferenziato,,false,false
+2026-06-16,residenziale,organico,,false,false
+2026-06-16,periferia_ovest,organico,,false,false
+2026-06-16,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-06-17,residenziale,indifferenziato,,false,false
+2026-06-17,periferia_ovest,indifferenziato,,false,false
+2026-06-17,industriale,carta,,false,false
+2026-06-18,residenziale,organico,,false,false
+2026-06-18,periferia_ovest,vetro,,false,false
+2026-06-18,industriale,plastica,,false,false
+2026-06-19,residenziale,plastica,,false,false
+2026-06-19,periferia_ovest,plastica,,false,false
+2026-06-19,industriale,organico,,false,false
+2026-06-20,residenziale,organico,,false,false
+2026-06-20,periferia_ovest,organico,,false,false
+2026-06-22,residenziale,carta,,false,false
+2026-06-22,periferia_ovest,carta,,false,false
+2026-06-22,industriale,indifferenziato,,false,false
+2026-06-23,residenziale,organico,,false,false
+2026-06-23,periferia_ovest,organico,,false,false
+2026-06-23,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-06-24,residenziale,indifferenziato,,false,false
+2026-06-24,periferia_ovest,indifferenziato,,false,false
+2026-06-24,industriale,carta,,false,false
+2026-06-25,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-06-25,industriale,plastica,,false,false
+2026-06-26,residenziale,plastica,,false,false
+2026-06-26,periferia_ovest,plastica,,false,false
+2026-06-26,industriale,organico,,false,false
+2026-06-27,residenziale,organico,,false,false
+2026-06-27,periferia_ovest,organico,,false,false
+2026-06-29,residenziale,carta,,false,false
+2026-06-29,periferia_ovest,carta,,false,false
+2026-06-29,industriale,indifferenziato,,false,false
+2026-06-30,residenziale,organico,,false,false
+2026-06-30,periferia_ovest,organico,,false,false
+2026-06-30,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-07-01,residenziale,indifferenziato,,false,false
+2026-07-01,periferia_ovest,indifferenziato,,false,false
+2026-07-01,industriale,carta,,false,false
+2026-07-02,residenziale,organico,,false,false
+2026-07-02,periferia_ovest,vetro,,false,false
+2026-07-02,industriale,plastica,,false,false
 2026-07-03,residenziale,plastica,,false,false
+2026-07-03,periferia_ovest,plastica,,false,false
+2026-07-03,industriale,organico,,false,false
 2026-07-04,residenziale,organico,,false,false
-2026-07-06,residenziale,carta,,false,false
-2026-07-08,residenziale,organico,,false,false
-2026-07-10,residenziale,vetro,,false,false
-2026-07-11,residenziale,secco,,false,false
-2026-07-13,residenziale,plastica,,false,false
-2026-07-15,residenziale,organico,,false,false
-2026-07-17,residenziale,carta,,false,false
-2026-07-20,residenziale,"organico,vetro",Doppio ritiro,false,true
-2026-07-22,residenziale,plastica,,false,false
-2026-07-24,residenziale,organico,,false,false
-2026-07-27,residenziale,secco,,false,false
-2026-07-29,residenziale,carta,,false,false
-2026-07-31,residenziale,organico,,false,false
-2026-08-03,residenziale,plastica,,false,false
-2026-08-05,residenziale,organico,,false,false
-2026-08-07,residenziale,vetro,,false,false
-2026-08-10,residenziale,carta,,false,false
-2026-08-12,residenziale,organico,,false,false
-2026-08-14,residenziale,secco,,false,false
-2026-08-17,residenziale,plastica,,false,false
-2026-08-19,residenziale,organico,,false,false
-2026-08-21,residenziale,carta,,false,false
-2026-08-24,residenziale,"organico,vetro",Doppio ritiro,false,true
 2026-07-04,periferia_ovest,organico,,false,false
-2026-07-07,periferia_ovest,plastica,,false,false
-2026-07-10,periferia_ovest,carta,,false,false
-2026-07-14,periferia_ovest,vetro,,false,false
-2026-07-17,periferia_ovest,secco,,false,false
+2026-07-06,residenziale,carta,,false,false
+2026-07-06,periferia_ovest,carta,,false,false
+2026-07-06,industriale,indifferenziato,,false,false
+2026-07-07,residenziale,organico,,false,false
+2026-07-07,periferia_ovest,organico,,false,false
+2026-07-07,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-07-08,residenziale,indifferenziato,,false,false
+2026-07-08,periferia_ovest,indifferenziato,,false,false
+2026-07-08,industriale,carta,,false,false
+2026-07-09,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-07-09,industriale,plastica,,false,false
+2026-07-10,residenziale,plastica,,false,false
+2026-07-10,periferia_ovest,plastica,,false,false
+2026-07-10,industriale,organico,,false,false
+2026-07-11,residenziale,organico,,false,false
+2026-07-11,periferia_ovest,organico,,false,false
+2026-07-13,residenziale,carta,,false,false
+2026-07-13,periferia_ovest,carta,,false,false
+2026-07-13,industriale,indifferenziato,,false,false
+2026-07-14,residenziale,organico,,false,false
+2026-07-14,periferia_ovest,organico,,false,false
+2026-07-14,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-07-15,residenziale,indifferenziato,,false,false
+2026-07-15,periferia_ovest,indifferenziato,,false,false
+2026-07-15,industriale,carta,,false,false
+2026-07-16,residenziale,organico,,false,false
+2026-07-16,periferia_ovest,vetro,,false,false
+2026-07-16,industriale,plastica,,false,false
+2026-07-17,residenziale,plastica,,false,false
+2026-07-17,periferia_ovest,plastica,,false,false
+2026-07-17,industriale,organico,,false,false
+2026-07-18,residenziale,organico,,false,false
+2026-07-18,periferia_ovest,organico,,false,false
+2026-07-20,residenziale,carta,,false,false
+2026-07-20,periferia_ovest,carta,,false,false
+2026-07-20,industriale,indifferenziato,,false,false
+2026-07-21,residenziale,organico,,false,false
 2026-07-21,periferia_ovest,organico,,false,false
+2026-07-21,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-07-22,residenziale,indifferenziato,,false,false
+2026-07-22,periferia_ovest,indifferenziato,,false,false
+2026-07-22,industriale,carta,,false,false
+2026-07-23,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-07-23,industriale,plastica,,false,false
+2026-07-24,residenziale,plastica,,false,false
 2026-07-24,periferia_ovest,plastica,,false,false
-2026-07-28,periferia_ovest,carta,,false,false
-2026-07-05,industriale,secco,,false,false
-2026-07-09,industriale,carta,,false,false
-2026-07-12,industriale,plastica,,false,false
-2026-07-16,industriale,vetro,,false,false
-2026-07-19,industriale,secco,,false,false
-2026-07-23,industriale,carta,,false,false
-2026-07-26,industriale,plastica,,false,false
-2026-07-30,industriale,vetro,,false,false
+2026-07-24,industriale,organico,,false,false
+2026-07-25,residenziale,organico,,false,false
+2026-07-25,periferia_ovest,organico,,false,false
+2026-07-27,residenziale,carta,,false,false
+2026-07-27,periferia_ovest,carta,,false,false
+2026-07-27,industriale,indifferenziato,,false,false
+2026-07-28,residenziale,organico,,false,false
+2026-07-28,periferia_ovest,organico,,false,false
+2026-07-28,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-07-29,residenziale,indifferenziato,,false,false
+2026-07-29,periferia_ovest,indifferenziato,,false,false
+2026-07-29,industriale,carta,,false,false
+2026-07-30,residenziale,organico,,false,false
+2026-07-30,periferia_ovest,vetro,,false,false
+2026-07-30,industriale,plastica,,false,false
+2026-07-31,residenziale,plastica,,false,false
+2026-07-31,periferia_ovest,plastica,,false,false
+2026-07-31,industriale,organico,,false,false
+2026-08-01,residenziale,organico,,false,false
+2026-08-01,periferia_ovest,organico,,false,false
+2026-08-03,residenziale,carta,,false,false
+2026-08-03,periferia_ovest,carta,,false,false
+2026-08-03,industriale,indifferenziato,,false,false
+2026-08-04,residenziale,organico,,false,false
+2026-08-04,periferia_ovest,organico,,false,false
+2026-08-04,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-08-05,residenziale,indifferenziato,,false,false
+2026-08-05,periferia_ovest,indifferenziato,,false,false
+2026-08-05,industriale,carta,,false,false
+2026-08-06,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-08-06,industriale,plastica,,false,false
+2026-08-07,residenziale,plastica,,false,false
+2026-08-07,periferia_ovest,plastica,,false,false
+2026-08-07,industriale,organico,,false,false
+2026-08-08,residenziale,organico,,false,false
+2026-08-08,periferia_ovest,organico,,false,false
+2026-08-10,residenziale,carta,,false,false
+2026-08-10,periferia_ovest,carta,,false,false
+2026-08-10,industriale,indifferenziato,,false,false
+2026-08-11,residenziale,organico,,false,false
+2026-08-11,periferia_ovest,organico,,false,false
+2026-08-11,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-08-12,residenziale,indifferenziato,,false,false
+2026-08-12,periferia_ovest,indifferenziato,,false,false
+2026-08-12,industriale,carta,,false,false
+2026-08-13,residenziale,organico,,false,false
+2026-08-13,periferia_ovest,"vetro,organico",Doppio ritiro,false,true
+2026-08-13,industriale,plastica,,false,false
+2026-08-14,residenziale,plastica,,false,false
+2026-08-14,periferia_ovest,plastica,,false,false
+2026-08-14,industriale,organico,,false,false
+2026-08-17,residenziale,carta,,false,false
+2026-08-17,periferia_ovest,carta,,false,false
+2026-08-17,industriale,indifferenziato,,false,false
+2026-08-18,residenziale,organico,,false,false
+2026-08-18,periferia_ovest,organico,,false,false
+2026-08-18,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-08-19,residenziale,indifferenziato,,false,false
+2026-08-19,periferia_ovest,indifferenziato,,false,false
+2026-08-19,industriale,carta,,false,false
+2026-08-20,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-08-20,industriale,plastica,,false,false
+2026-08-21,residenziale,plastica,,false,false
+2026-08-21,periferia_ovest,plastica,,false,false
+2026-08-21,industriale,organico,,false,false
+2026-08-22,residenziale,organico,,false,false
+2026-08-22,periferia_ovest,organico,,false,false
+2026-08-24,residenziale,carta,,false,false
+2026-08-24,periferia_ovest,carta,,false,false
+2026-08-24,industriale,indifferenziato,,false,false
+2026-08-25,residenziale,organico,,false,false
+2026-08-25,periferia_ovest,organico,,false,false
+2026-08-25,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-08-26,residenziale,indifferenziato,,false,false
+2026-08-26,periferia_ovest,indifferenziato,,false,false
+2026-08-26,industriale,carta,,false,false
+2026-08-27,residenziale,organico,,false,false
+2026-08-27,periferia_ovest,vetro,,false,false
+2026-08-27,industriale,plastica,,false,false
+2026-08-28,residenziale,plastica,,false,false
+2026-08-28,periferia_ovest,plastica,,false,false
+2026-08-28,industriale,organico,,false,false
+2026-08-29,residenziale,organico,,false,false
+2026-08-29,periferia_ovest,organico,,false,false
+2026-08-31,residenziale,carta,,false,false
+2026-08-31,periferia_ovest,carta,,false,false
+2026-08-31,industriale,indifferenziato,,false,false
+2026-09-01,residenziale,organico,,false,false
+2026-09-01,periferia_ovest,organico,,false,false
+2026-09-01,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-09-02,residenziale,indifferenziato,,false,false
+2026-09-02,periferia_ovest,indifferenziato,,false,false
+2026-09-02,industriale,carta,,false,false
+2026-09-03,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-09-03,industriale,plastica,,false,false
+2026-09-04,residenziale,plastica,,false,false
+2026-09-04,periferia_ovest,plastica,,false,false
+2026-09-04,industriale,organico,,false,false
+2026-09-05,residenziale,organico,,false,false
+2026-09-05,periferia_ovest,organico,,false,false
+2026-09-07,residenziale,carta,,false,false
+2026-09-07,periferia_ovest,carta,,false,false
+2026-09-07,industriale,indifferenziato,,false,false
+2026-09-08,residenziale,organico,,false,false
+2026-09-08,periferia_ovest,organico,,false,false
+2026-09-08,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-09-09,residenziale,indifferenziato,,false,false
+2026-09-09,periferia_ovest,indifferenziato,,false,false
+2026-09-09,industriale,carta,,false,false
+2026-09-10,residenziale,organico,,false,false
+2026-09-10,periferia_ovest,vetro,,false,false
+2026-09-10,industriale,plastica,,false,false
+2026-09-11,residenziale,plastica,,false,false
+2026-09-11,periferia_ovest,plastica,,false,false
+2026-09-11,industriale,organico,,false,false
+2026-09-12,residenziale,organico,,false,false
+2026-09-12,periferia_ovest,organico,,false,false
+2026-09-14,residenziale,carta,,false,false
+2026-09-14,periferia_ovest,carta,,false,false
+2026-09-14,industriale,indifferenziato,,false,false
+2026-09-15,residenziale,organico,,false,false
+2026-09-15,periferia_ovest,organico,,false,false
+2026-09-15,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-09-16,residenziale,indifferenziato,,false,false
+2026-09-16,periferia_ovest,indifferenziato,,false,false
+2026-09-16,industriale,carta,,false,false
+2026-09-17,residenziale,vetro,,false,false
+2026-09-17,periferia_ovest,vetro,,false,false
+2026-09-17,industriale,plastica,,false,false
+2026-09-18,residenziale,plastica,,false,false
+2026-09-18,periferia_ovest,plastica,,false,false
+2026-09-18,industriale,organico,,false,false
+2026-09-19,residenziale,organico,,false,false
+2026-09-19,periferia_ovest,organico,,false,false
+2026-09-21,residenziale,carta,,false,false
+2026-09-21,periferia_ovest,carta,,false,false
+2026-09-21,industriale,indifferenziato,,false,false
+2026-09-23,residenziale,organico,Variazione calendario,true,false
+2026-09-23,periferia_ovest,organico,Variazione calendario,true,false
+2026-09-23,industriale,"organico,vetro",Variazione calendario - Doppio ritiro,true,true
+2026-09-24,residenziale,indifferenziato,Variazione calendario,true,false
+2026-09-24,periferia_ovest,indifferenziato,Variazione calendario,true,false
+2026-09-24,industriale,carta,Variazione calendario,true,false
+2026-09-25,residenziale,plastica,,false,false
+2026-09-25,periferia_ovest,plastica,,false,false
+2026-09-25,industriale,plastica,Variazione calendario,true,false
+2026-09-26,residenziale,organico,,false,false
+2026-09-26,periferia_ovest,organico,,false,false
+2026-09-26,industriale,organico,Variazione calendario,true,false
+2026-09-28,residenziale,carta,,false,false
+2026-09-28,periferia_ovest,carta,,false,false
+2026-09-28,industriale,indifferenziato,,false,false
+2026-09-29,residenziale,organico,,false,false
+2026-09-29,periferia_ovest,organico,,false,false
+2026-09-29,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-09-30,residenziale,indifferenziato,,false,false
+2026-09-30,periferia_ovest,indifferenziato,,false,false
+2026-09-30,industriale,carta,,false,false
+2026-10-01,residenziale,vetro,,false,false
+2026-10-01,periferia_ovest,vetro,,false,false
+2026-10-01,industriale,plastica,,false,false
+2026-10-02,residenziale,plastica,,false,false
+2026-10-02,periferia_ovest,plastica,,false,false
+2026-10-02,industriale,organico,,false,false
+2026-10-03,residenziale,organico,,false,false
+2026-10-03,periferia_ovest,organico,,false,false
+2026-10-05,residenziale,carta,,false,false
+2026-10-05,periferia_ovest,carta,,false,false
+2026-10-05,industriale,indifferenziato,,false,false
+2026-10-06,residenziale,organico,,false,false
+2026-10-06,periferia_ovest,organico,,false,false
+2026-10-06,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-10-07,residenziale,indifferenziato,,false,false
+2026-10-07,periferia_ovest,indifferenziato,,false,false
+2026-10-07,industriale,carta,,false,false
+2026-10-08,industriale,plastica,,false,false
+2026-10-09,residenziale,plastica,,false,false
+2026-10-09,periferia_ovest,plastica,,false,false
+2026-10-09,industriale,organico,,false,false
+2026-10-10,residenziale,organico,,false,false
+2026-10-10,periferia_ovest,organico,,false,false
+2026-10-12,residenziale,carta,,false,false
+2026-10-12,periferia_ovest,carta,,false,false
+2026-10-12,industriale,indifferenziato,,false,false
+2026-10-13,residenziale,organico,,false,false
+2026-10-13,periferia_ovest,organico,,false,false
+2026-10-13,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-10-14,residenziale,indifferenziato,,false,false
+2026-10-14,periferia_ovest,indifferenziato,,false,false
+2026-10-14,industriale,carta,,false,false
+2026-10-15,residenziale,vetro,,false,false
+2026-10-15,periferia_ovest,vetro,,false,false
+2026-10-15,industriale,plastica,,false,false
+2026-10-16,residenziale,plastica,,false,false
+2026-10-16,periferia_ovest,plastica,,false,false
+2026-10-16,industriale,organico,,false,false
+2026-10-17,residenziale,organico,,false,false
+2026-10-17,periferia_ovest,organico,,false,false
+2026-10-19,residenziale,carta,,false,false
+2026-10-19,periferia_ovest,carta,,false,false
+2026-10-19,industriale,indifferenziato,,false,false
+2026-10-20,residenziale,organico,,false,false
+2026-10-20,periferia_ovest,organico,,false,false
+2026-10-20,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-10-21,residenziale,indifferenziato,,false,false
+2026-10-21,periferia_ovest,indifferenziato,,false,false
+2026-10-21,industriale,carta,,false,false
+2026-10-22,industriale,plastica,,false,false
+2026-10-23,residenziale,plastica,,false,false
+2026-10-23,periferia_ovest,plastica,,false,false
+2026-10-23,industriale,organico,,false,false
+2026-10-24,residenziale,organico,,false,false
+2026-10-24,periferia_ovest,organico,,false,false
+2026-10-26,residenziale,carta,,false,false
+2026-10-26,periferia_ovest,carta,,false,false
+2026-10-26,industriale,indifferenziato,,false,false
+2026-10-27,residenziale,organico,,false,false
+2026-10-27,periferia_ovest,organico,,false,false
+2026-10-27,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-10-28,residenziale,indifferenziato,,false,false
+2026-10-28,periferia_ovest,indifferenziato,,false,false
+2026-10-28,industriale,carta,,false,false
+2026-10-29,residenziale,vetro,,false,false
+2026-10-29,periferia_ovest,vetro,,false,false
+2026-10-29,industriale,plastica,,false,false
+2026-10-30,residenziale,plastica,,false,false
+2026-10-30,periferia_ovest,plastica,,false,false
+2026-10-30,industriale,organico,,false,false
+2026-10-31,residenziale,organico,,false,false
+2026-10-31,periferia_ovest,organico,,false,false
+2026-11-02,residenziale,carta,,false,false
+2026-11-02,periferia_ovest,carta,,false,false
+2026-11-02,industriale,indifferenziato,,false,false
+2026-11-03,residenziale,organico,,false,false
+2026-11-03,periferia_ovest,organico,,false,false
+2026-11-03,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-11-04,residenziale,indifferenziato,,false,false
+2026-11-04,periferia_ovest,indifferenziato,,false,false
+2026-11-04,industriale,carta,,false,false
+2026-11-05,industriale,plastica,,false,false
+2026-11-06,residenziale,plastica,,false,false
+2026-11-06,periferia_ovest,plastica,,false,false
+2026-11-06,industriale,organico,,false,false
+2026-11-07,residenziale,organico,,false,false
+2026-11-07,periferia_ovest,organico,,false,false
+2026-11-09,residenziale,carta,,false,false
+2026-11-09,periferia_ovest,carta,,false,false
+2026-11-09,industriale,indifferenziato,,false,false
+2026-11-10,residenziale,organico,,false,false
+2026-11-10,periferia_ovest,organico,,false,false
+2026-11-10,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-11-11,residenziale,indifferenziato,,false,false
+2026-11-11,periferia_ovest,indifferenziato,,false,false
+2026-11-11,industriale,carta,,false,false
+2026-11-12,residenziale,vetro,,false,false
+2026-11-12,periferia_ovest,vetro,,false,false
+2026-11-12,industriale,plastica,,false,false
+2026-11-13,residenziale,plastica,,false,false
+2026-11-13,periferia_ovest,plastica,,false,false
+2026-11-13,industriale,organico,,false,false
+2026-11-14,residenziale,organico,,false,false
+2026-11-14,periferia_ovest,organico,,false,false
+2026-11-16,residenziale,carta,,false,false
+2026-11-16,periferia_ovest,carta,,false,false
+2026-11-16,industriale,indifferenziato,,false,false
+2026-11-17,residenziale,organico,,false,false
+2026-11-17,periferia_ovest,organico,,false,false
+2026-11-17,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-11-18,residenziale,indifferenziato,,false,false
+2026-11-18,periferia_ovest,indifferenziato,,false,false
+2026-11-18,industriale,carta,,false,false
+2026-11-19,industriale,plastica,,false,false
+2026-11-20,residenziale,plastica,,false,false
+2026-11-20,periferia_ovest,plastica,,false,false
+2026-11-20,industriale,organico,,false,false
+2026-11-21,residenziale,organico,,false,false
+2026-11-21,periferia_ovest,organico,,false,false
+2026-11-23,residenziale,carta,,false,false
+2026-11-23,periferia_ovest,carta,,false,false
+2026-11-23,industriale,indifferenziato,,false,false
+2026-11-24,residenziale,organico,,false,false
+2026-11-24,periferia_ovest,organico,,false,false
+2026-11-24,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-11-25,residenziale,indifferenziato,,false,false
+2026-11-25,periferia_ovest,indifferenziato,,false,false
+2026-11-25,industriale,carta,,false,false
+2026-11-26,residenziale,vetro,,false,false
+2026-11-26,periferia_ovest,vetro,,false,false
+2026-11-26,industriale,plastica,,false,false
+2026-11-27,residenziale,plastica,,false,false
+2026-11-27,periferia_ovest,plastica,,false,false
+2026-11-27,industriale,organico,,false,false
+2026-11-28,residenziale,organico,,false,false
+2026-11-28,periferia_ovest,organico,,false,false
+2026-11-30,residenziale,carta,,false,false
+2026-11-30,periferia_ovest,carta,,false,false
+2026-11-30,industriale,indifferenziato,,false,false
+2026-12-01,residenziale,organico,,false,false
+2026-12-01,periferia_ovest,organico,,false,false
+2026-12-01,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-12-02,residenziale,indifferenziato,,false,false
+2026-12-02,periferia_ovest,indifferenziato,,false,false
+2026-12-02,industriale,carta,,false,false
+2026-12-03,residenziale,vetro,,false,false
+2026-12-03,periferia_ovest,vetro,,false,false
+2026-12-03,industriale,plastica,,false,false
+2026-12-04,residenziale,plastica,,false,false
+2026-12-04,periferia_ovest,plastica,,false,false
+2026-12-04,industriale,organico,,false,false
+2026-12-05,residenziale,organico,,false,false
+2026-12-05,periferia_ovest,organico,,false,false
+2026-12-07,residenziale,carta,,false,false
+2026-12-07,periferia_ovest,carta,,false,false
+2026-12-07,industriale,indifferenziato,,false,false
+2026-12-09,residenziale,organico,Variazione calendario,true,false
+2026-12-09,periferia_ovest,organico,Variazione calendario,true,false
+2026-12-09,industriale,"organico,vetro",Variazione calendario - Doppio ritiro,true,true
+2026-12-10,residenziale,indifferenziato,Variazione calendario,true,false
+2026-12-10,periferia_ovest,indifferenziato,Variazione calendario,true,false
+2026-12-10,industriale,carta,Variazione calendario,true,false
+2026-12-11,residenziale,plastica,,false,false
+2026-12-11,periferia_ovest,plastica,,false,false
+2026-12-11,industriale,plastica,Variazione calendario,true,false
+2026-12-12,residenziale,organico,,false,false
+2026-12-12,periferia_ovest,organico,,false,false
+2026-12-12,industriale,organico,Variazione calendario,true,false
+2026-12-14,residenziale,carta,,false,false
+2026-12-14,periferia_ovest,carta,,false,false
+2026-12-14,industriale,indifferenziato,,false,false
+2026-12-15,residenziale,organico,,false,false
+2026-12-15,periferia_ovest,organico,,false,false
+2026-12-15,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-12-16,residenziale,indifferenziato,,false,false
+2026-12-16,periferia_ovest,indifferenziato,,false,false
+2026-12-16,industriale,carta,,false,false
+2026-12-17,residenziale,vetro,,false,false
+2026-12-17,periferia_ovest,vetro,,false,false
+2026-12-17,industriale,plastica,,false,false
+2026-12-18,residenziale,plastica,,false,false
+2026-12-18,periferia_ovest,plastica,,false,false
+2026-12-18,industriale,organico,,false,false
+2026-12-19,residenziale,organico,,false,false
+2026-12-19,periferia_ovest,organico,,false,false
+2026-12-21,residenziale,carta,,false,false
+2026-12-21,periferia_ovest,carta,,false,false
+2026-12-21,industriale,indifferenziato,,false,false
+2026-12-22,residenziale,indifferenziato,Variazione calendario,true,false
+2026-12-22,periferia_ovest,organico,,false,false
+2026-12-22,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-12-23,residenziale,plastica,Variazione calendario,true,false
+2026-12-23,periferia_ovest,indifferenziato,,false,false
+2026-12-23,industriale,carta,,false,false
+2026-12-24,residenziale,organico,Variazione calendario,true,false
+2026-12-24,periferia_ovest,plastica,,false,false
+2026-12-24,industriale,plastica,,false,false
+2026-12-28,residenziale,carta,,false,false
+2026-12-28,periferia_ovest,carta,,false,false
+2026-12-28,industriale,indifferenziato,,false,false
+2026-12-29,residenziale,"organico,vetro",Doppio ritiro,false,true
+2026-12-29,periferia_ovest,organico,,false,false
+2026-12-29,industriale,"organico,vetro",Doppio ritiro,false,true
+2026-12-30,residenziale,indifferenziato,,false,false
+2026-12-30,periferia_ovest,indifferenziato,,false,false
+2026-12-30,industriale,carta,,false,false
+2026-12-31,residenziale,plastica,Variazione calendario,true,false
+2026-12-31,periferia_ovest,"vetro,plastica",Doppio ritiro,false,true
+2026-12-31,industriale,plastica,,false,false
