@@ -1,4 +1,4 @@
-﻿{
+{
   "id": ".",
   "name": "B-Done",
   "short_name": "B-Done",
@@ -6,16 +6,34 @@
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#f7fbf8",
+  "background_color": "#ffffff",
   "theme_color": "#0f9f7a",
   "orientation": "portrait",
   "categories": ["utilities", "productivity", "lifestyle"],
   "icons": [
     {
-      "src": "icons/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [

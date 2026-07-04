@@ -1,4 +1,4 @@
-﻿import { Ban, CalendarDays, Filter } from "lucide-react";
+import { Ban, CalendarDays, Filter } from "lucide-react";
 import { useMemo, useState } from "react";
 import { formatWasteList } from "../../domain/calendarEngine";
 import { getUpcomingEvents } from "../../domain/calendarEngine";
@@ -74,6 +74,7 @@ export function CalendarView({ events, municipality, zone, today }: CalendarView
 
           const isDoublePickup = item.event.isDoublePickup || item.event.wasteTypes.length > 1;
           const tone = isDoublePickup ? "mixed" : item.event.wasteTypes[0];
+          const visibleNote = getVisibleEventNote(item.event, isDoublePickup);
 
           return (
             <article className="calendar-item" data-waste={tone} key={`${item.event.date}-${item.event.zone}`}>
@@ -82,7 +83,7 @@ export function CalendarView({ events, municipality, zone, today }: CalendarView
                 <WasteVisualGroup wasteTypes={item.event.wasteTypes} compact />
                 <div>
                   <h2>{formatWasteList(item.event.wasteTypes)}</h2>
-                  {item.event.notes && <p className="muted">{item.event.notes}</p>}
+                  {visibleNote && <p className="muted">{visibleNote}</p>}
                 </div>
               </div>
               {isDoublePickup && <span className="double-pickup-chip calendar-chip">Doppio ritiro</span>}
@@ -95,6 +96,11 @@ export function CalendarView({ events, municipality, zone, today }: CalendarView
   );
 }
 
+function getVisibleEventNote(event: CollectionEvent, isDoublePickup: boolean): string {
+  const note = event.notes.trim();
+  if (isDoublePickup && note.toLowerCase() === "doppio ritiro") return "";
+  return note;
+}
 function buildCalendarItems(
   events: CollectionEvent[],
   municipality: MunicipalityId,

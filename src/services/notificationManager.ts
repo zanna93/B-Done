@@ -1,4 +1,4 @@
-﻿import type { CollectionEvent, NotificationMode, NotificationSettings } from "../domain/models";
+import type { CollectionEvent, NotificationMode, NotificationSettings } from "../domain/models";
 import { buildNotificationText } from "../domain/calendarEngine";
 import { assetPath } from "../utils/assets";
 
@@ -39,15 +39,15 @@ export async function showTestNotification(): Promise<boolean> {
   if (registration?.showNotification) {
     await registration.showNotification("B-Done", {
       body: "Promemoria attivi. Bidone pronto al momento giusto.",
-      icon: assetPath("icons/icon.svg"),
-      badge: assetPath("icons/icon.svg"),
+      icon: assetPath("icons/icon-192.png"),
+      badge: assetPath("icons/icon-192.png"),
     });
     return true;
   }
 
   new Notification("B-Done", {
     body: "Promemoria attivi. Bidone pronto al momento giusto.",
-    icon: assetPath("icons/icon.svg"),
+    icon: assetPath("icons/icon-192.png"),
   });
   return true;
 }

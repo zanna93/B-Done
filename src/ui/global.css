@@ -1,4 +1,4 @@
-﻿* {
+* {
   box-sizing: border-box;
 }
 
@@ -122,6 +122,27 @@ select:focus-visible {
 .lede {
   margin: var(--space-4) 0 var(--space-6);
   font-size: 1.08rem;
+}
+
+.onboarding__panel > h1 + .choice-row,
+.onboarding__panel > h1 + .segmented-control {
+  margin-top: var(--space-5);
+}
+
+.field--street-input {
+  margin: var(--space-3) 0 var(--space-5);
+}
+
+.onboarding__panel .segmented-control {
+  row-gap: var(--space-3);
+}
+
+.onboarding__panel .segmented-control + .time-grid {
+  margin-top: var(--space-5);
+}
+
+.onboarding__panel .step-actions {
+  margin-top: var(--space-5);
 }
 
 .muted,
@@ -606,10 +627,14 @@ select:focus-visible {
   margin-bottom: var(--space-4);
   place-items: center;
   border-radius: var(--radius-panel);
-  background: var(--color-primary);
-  color: #ffffff;
-  font-size: 2.3rem;
-  font-weight: 700;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgb(8 116 91 / 18%);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .step-actions {

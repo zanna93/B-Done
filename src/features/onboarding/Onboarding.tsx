@@ -4,6 +4,7 @@ import type { MunicipalityDataset, NotificationMode, UserPreferences, ZoneId } f
 import { resolveStreet, suggestStreets } from "../../domain/streetResolver";
 import { requestNotificationPermission } from "../../services/notificationManager";
 import { DEFAULT_NOTIFICATION_SETTINGS, DEFAULT_PREFERENCES, zoneLabel } from "../../services/storage";
+import { assetPath } from "../../utils/assets";
 
 interface OnboardingProps {
   dataset: MunicipalityDataset;
@@ -54,11 +55,14 @@ export function Onboarding({ dataset, onComplete }: OnboardingProps) {
       {step === 0 && (
         <section className="onboarding__panel">
           <div className="brand-mark" aria-hidden="true">
-            B
+            <img src={assetPath("icons/icon-192.png")} alt="" />
           </div>
           <p className="eyebrow">Benvenuto</p>
           <h1>B-Done</h1>
-          <p className="lede">Il tuo assistente porta a porta. Una volta configurato, ti ricorda cosa esporre.</p>
+          <p className="lede">
+            Il tuo assistente per la raccolta rifiuti porta a porta. Una volta configurato, ti ricorda cosa mettere
+            fuori.
+          </p>
           <button className="primary-action" type="button" onClick={() => setStep(1)}>
             <Sparkles aria-hidden="true" />
             Inizia
@@ -85,14 +89,14 @@ export function Onboarding({ dataset, onComplete }: OnboardingProps) {
         <section className="onboarding__panel">
           <p className="eyebrow">Indirizzo</p>
           <h1>Scrivi la tua via</h1>
-          <label className="field">
-            <span>Via</span>
+          <label className="field field--street-input">
             <div className="input-with-icon">
               <Search aria-hidden="true" />
               <input
                 value={street}
                 onChange={(event) => setStreet(event.target.value)}
                 placeholder="es. Montecappone"
+                aria-label="Via"
                 autoComplete="street-address"
               />
             </div>
