@@ -1,7 +1,7 @@
-const CACHE_NAME = "b-done-v1";
+const CACHE_NAME = "b-done-v2";
 const scopeUrl = self.registration.scope;
 const scopedUrl = (path) => new URL(path, scopeUrl).toString();
-const APP_SHELL = [scopeUrl, scopedUrl("manifest.webmanifest"), scopedUrl("favicon.ico"), scopedUrl("icons/icon-192.png")];
+const APP_SHELL = [scopeUrl, scopedUrl("manifest.webmanifest"), scopedUrl("favicon.ico"), scopedUrl("icons/b-done-icon-192.png")];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

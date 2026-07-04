@@ -55,7 +55,7 @@ export function Onboarding({ dataset, onComplete }: OnboardingProps) {
       {step === 0 && (
         <section className="onboarding__panel">
           <div className="brand-mark" aria-hidden="true">
-            <img src={assetPath("icons/icon-192.png")} alt="" />
+            <img src={assetPath("icons/b-done-icon-192.png")} alt="" />
           </div>
           <p className="eyebrow">Benvenuto</p>
           <h1>B-Done</h1>

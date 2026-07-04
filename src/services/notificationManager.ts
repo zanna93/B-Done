@@ -39,15 +39,15 @@ export async function showTestNotification(): Promise<boolean> {
   if (registration?.showNotification) {
     await registration.showNotification("B-Done", {
       body: "Promemoria attivi. Bidone pronto al momento giusto.",
-      icon: assetPath("icons/icon-192.png"),
-      badge: assetPath("icons/icon-192.png"),
+      icon: assetPath("icons/b-done-icon-192.png"),
+      badge: assetPath("icons/b-done-icon-192.png"),
     });
     return true;
   }
 
   new Notification("B-Done", {
     body: "Promemoria attivi. Bidone pronto al momento giusto.",
-    icon: assetPath("icons/icon-192.png"),
+    icon: assetPath("icons/b-done-icon-192.png"),
   });
   return true;
 }
