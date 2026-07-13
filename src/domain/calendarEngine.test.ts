@@ -19,6 +19,14 @@ const events: CollectionEvent[] = [
     isVariation: false,
     isDoublePickup: true,
   },
+  {
+    date: "2026-07-07",
+    zone: "residenziale",
+    wasteTypes: ["carta"],
+    notes: "",
+    isVariation: false,
+    isDoublePickup: false,
+  },
 ];
 
 describe("calendarEngine", () => {
@@ -29,6 +37,7 @@ describe("calendarEngine", () => {
     expect(summary.tomorrow).toHaveLength(1);
     expect(summary.countdownDays).toBe(0);
     expect(summary.featuredPickup?.date).toBe("2026-07-04");
+    expect(summary.followingPickup?.date).toBe("2026-07-05");
   });
 
   it("filters upcoming events by zone and range", () => {
@@ -41,11 +50,12 @@ describe("calendarEngine", () => {
 
     expect(summary.nextPickup?.date).toBe("2026-07-05");
     expect(summary.featuredPickup?.date).toBe("2026-07-05");
+    expect(summary.followingPickup?.date).toBe("2026-07-07");
     expect(summary.countdownDays).toBe(1);
+    expect(summary.followingCountdownDays).toBe(3);
   });
 
   it("formats double pickup notification text", () => {
     expect(buildNotificationText(events[1], "tomorrow")).toBe("Domani doppio ritiro: Organico + Vetro.");
   });
 });
-

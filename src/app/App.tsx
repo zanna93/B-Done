@@ -112,4 +112,3 @@ function getInitialTab(): AppTab {
   const tab = new URLSearchParams(window.location.search).get("tab");
   return tab === "calendar" || tab === "settings" ? tab : "home";
 }
-

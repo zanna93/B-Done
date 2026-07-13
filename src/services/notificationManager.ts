@@ -38,7 +38,7 @@ export async function showTestNotification(): Promise<boolean> {
   const registration = await navigator.serviceWorker?.ready;
   if (registration?.showNotification) {
     await registration.showNotification("B-Done", {
-      body: "Promemoria attivi. Bidone pronto al momento giusto.",
+      body: "Test riuscito. Per gli avvisi programmati usa il calendario o il futuro server push.",
       icon: assetPath("icons/b-done-icon-192.png"),
       badge: assetPath("icons/b-done-icon-192.png"),
     });
@@ -46,7 +46,7 @@ export async function showTestNotification(): Promise<boolean> {
   }
 
   new Notification("B-Done", {
-    body: "Promemoria attivi. Bidone pronto al momento giusto.",
+    body: "Test riuscito. Per gli avvisi programmati usa il calendario o il futuro server push.",
     icon: assetPath("icons/b-done-icon-192.png"),
   });
   return true;
@@ -58,14 +58,14 @@ export function shouldSendForMode(mode: NotificationMode, moment: "evening" | "m
 
 export function describeNotificationSupport(capabilities: NotificationCapabilities): string {
   if (!capabilities.supported) return "Questo browser non supporta le notifiche web.";
-  if (!capabilities.serviceWorker) return "Le notifiche persistenti richiedono un Service Worker.";
+  if (!capabilities.serviceWorker) return "Questo browser non supporta le notifiche persistenti via Service Worker.";
   if (!capabilities.push) {
-    return "Le notifiche sono salvate, ma questo browser non espone Web Push.";
+    return "Questo browser non espone Web Push: usa il calendario del telefono per avvisi affidabili.";
   }
   if (!capabilities.installedDisplayMode) {
-    return "Per notifiche piu affidabili su iPhone, aggiungi B-Done alla schermata Home.";
+    return "Per iPhone: aggiungi B-Done alla schermata Home. Per promemoria affidabili usa anche il calendario.";
   }
-  return "Dispositivo pronto per notifiche web. In futuro potremo collegare un server push senza cambiare impostazioni.";
+  return "Le notifiche immediate funzionano. Per avvisi programmati a app chiusa serve il calendario o un server push.";
 }
 
 export function buildReminderPreview(settings: NotificationSettings, tomorrow?: CollectionEvent, today?: CollectionEvent): string {
@@ -76,7 +76,7 @@ export function buildReminderPreview(settings: NotificationSettings, tomorrow?: 
   if (today && shouldSendForMode(settings.mode, "morning")) {
     return `${settings.morningTime} - ${buildNotificationText(today, "today")}`;
   }
-  return "Promemoria configurati. Ti avviseremo quando c'e un ritiro utile.";
+  return "Promemoria configurati. Scarica il calendario per riceverli anche ad app chiusa.";
 }
 
 function isIosStandalone(): boolean {

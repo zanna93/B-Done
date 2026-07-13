@@ -6,7 +6,9 @@ export interface HomeSummary {
   tomorrow: CollectionEvent[];
   nextPickup: CollectionEvent | null;
   featuredPickup: CollectionEvent | null;
+  followingPickup: CollectionEvent | null;
   countdownDays: number | null;
+  followingCountdownDays: number | null;
 }
 
 export interface HomeSummaryOptions {
@@ -46,14 +48,18 @@ export function getHomeSummary(
   const nextPickupSearchDate = isAfterNoon ? tomorrow : today;
   const nextPickup = getNextPickup(events, zone, nextPickupSearchDate);
   const featuredPickup = isAfterNoon ? nextPickup : todayEvents[0] ?? nextPickup;
+  const followingPickup = featuredPickup ? getNextPickup(events, zone, addDays(featuredPickup.date, 1)) : nextPickup;
   const countdownDays = nextPickup ? daysBetween(today, nextPickup.date) : null;
+  const followingCountdownDays = followingPickup ? daysBetween(today, followingPickup.date) : null;
 
   return {
     today: todayEvents,
     tomorrow: tomorrowEvents,
     nextPickup,
     featuredPickup,
+    followingPickup,
     countdownDays,
+    followingCountdownDays,
   };
 }
 
@@ -84,5 +90,3 @@ export function buildNotificationText(event: CollectionEvent, when: "today" | "t
 function compareEvents(a: CollectionEvent, b: CollectionEvent): number {
   return a.date.localeCompare(b.date) || a.zone.localeCompare(b.zone);
 }
-
-

@@ -1,4 +1,4 @@
-import { Bell, CheckCircle2, ChevronLeft, ChevronRight, MapPin, Search, Sparkles } from "lucide-react";
+﻿import { Bell, CheckCircle2, ChevronLeft, ChevronRight, MapPin, Search, Sparkles } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { MunicipalityDataset, NotificationMode, UserPreferences, ZoneId } from "../../domain/models";
 import { resolveStreet, suggestStreets } from "../../domain/streetResolver";
@@ -106,7 +106,7 @@ export function Onboarding({ dataset, onComplete }: OnboardingProps) {
             <div className="hint-box">
               {resolution.matchedStreet ? (
                 <span>
-                  Trovata: <strong>{resolution.matchedStreet}</strong> · {zoneLabel(resolution.zone)}
+                  Trovata: <strong>{resolution.matchedStreet}</strong> - {zoneLabel(resolution.zone)}
                 </span>
               ) : (
                 <span>Via non trovata: useremo {zoneLabel(resolution.zone)}.</span>

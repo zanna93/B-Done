@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
@@ -198,6 +198,7 @@ select:focus-visible {
 }
 
 .home-stats span,
+.stat-chip,
 .badge-pill,
 .variation-chip {
   display: inline-flex;
@@ -212,7 +213,8 @@ select:focus-visible {
   font-weight: 600;
 }
 
-.home-stats svg {
+.home-stats svg,
+.stat-chip svg {
   width: 1rem;
 }
 
@@ -460,6 +462,8 @@ select:focus-visible {
 .done-button,
 .icon-action,
 .choice-row,
+.stat-chip,
+.badge-pill,
 .zone-picker button,
 .segmented-control button,
 .suggestions button,
@@ -756,6 +760,10 @@ select:focus-visible {
   color: var(--color-muted);
 }
 
+.badge-pill[data-selected="true"] {
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
 .badge-pill svg {
   width: 1rem;
   height: 1rem;
@@ -765,6 +773,37 @@ select:focus-visible {
 .badge-pill[data-unlocked="true"] {
   background: #ffe7a1;
   color: #342601;
+}
+
+.badge-detail {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  background: var(--color-surface-strong);
+  color: var(--color-text);
+}
+
+.badge-detail svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 auto;
+  color: var(--color-primary-strong);
+}
+
+.badge-detail p {
+  margin: 0.25rem 0 0;
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+.badge-detail small {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--color-muted);
+  font-weight: 600;
 }
 
 .reminder-action {
@@ -1003,12 +1042,67 @@ select:focus-visible {
     transform: translateY(1px);
   }
 }
+:root[data-high-contrast="true"] .collection-card--primary[data-waste],
+:root[data-high-contrast="true"] .collection-card--primary[data-waste="mixed"] {
+  border-color: #000000;
+  background: #ffffff;
+  color: #000000;
+}
 
+:root[data-high-contrast="true"] .collection-card__date,
+:root[data-high-contrast="true"] .collection-card--primary .help-dot,
+:root[data-high-contrast="true"] .double-pickup-chip {
+  border: 1px solid #000000;
+  background: #ffffff;
+  color: #000000;
+}
 
+:root[data-high-contrast="true"] .primary-action,
+:root[data-high-contrast="true"] .done-button,
+:root[data-high-contrast="true"] .zone-picker button[aria-pressed="true"],
+:root[data-high-contrast="true"] .segmented-control button[aria-pressed="true"],
+:root[data-high-contrast="true"] .bottom-nav__item[aria-current="page"] {
+  border: 2px solid #000000;
+  background: #000000;
+  color: #ffffff;
+}
 
+:root[data-high-contrast="true"] .secondary-action,
+:root[data-high-contrast="true"] .ghost-action,
+:root[data-high-contrast="true"] .icon-action,
+:root[data-high-contrast="true"] .stat-chip,
+:root[data-high-contrast="true"] .badge-pill,
+:root[data-high-contrast="true"] .badge-detail,
+:root[data-high-contrast="true"] .countdown,
+:root[data-high-contrast="true"] .toggle-row,
+:root[data-high-contrast="true"] .bottom-nav__item {
+  border: 1px solid #000000;
+  background: #ffffff;
+  color: #000000;
+}
 
+:root[data-high-contrast="true"] .badge-pill[data-unlocked="true"],
+:root[data-high-contrast="true"] .badge-pill[data-selected="true"] {
+  border: 2px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
 
+:root[data-high-contrast="true"] .muted,
+:root[data-high-contrast="true"] .data-version,
+:root[data-high-contrast="true"] .badge-detail p,
+:root[data-high-contrast="true"] .badge-detail small,
+:root[data-high-contrast="true"] .calendar-item--pause h2,
+:root[data-high-contrast="true"] .guide-grid ul {
+  color: #000000;
+}
 
+:root[data-high-contrast="true"] .waste-badge {
+  border: 1px solid #000000;
+  background: #ffffff !important;
+  color: #000000;
+}
 
 
 

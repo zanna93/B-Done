@@ -1,8 +1,8 @@
-# B-Done
+﻿# B-Done
 
-B-Done è una Progressive Web App installabile per ricordare il corretto conferimento dei rifiuti porta a porta.
+B-Done Ã¨ una Progressive Web App installabile per ricordare il corretto conferimento dei rifiuti porta a porta.
 
-La prima versione è predisposta per il Comune di Jesi (AN), anno 2026, ma l'architettura è pensata per aggiungere nuovi comuni e nuovi anni senza riscrivere l'app.
+La prima versione Ã¨ predisposta per il Comune di Jesi (AN), anno 2026, ma l'architettura Ã¨ pensata per aggiungere nuovi comuni e nuovi anni senza riscrivere l'app.
 
 ## Stack
 
@@ -46,7 +46,7 @@ pnpm preview
 
 La build produce file statici in `dist/`, distribuibili su GitHub Pages, Vercel o Netlify.
 
-Per GitHub Pages puoi usare il workflow incluso in `.github/workflows/ci.yml` come base e aggiungere un job di deploy quando il repository remoto è pronto.
+Per GitHub Pages puoi usare il workflow incluso in `.github/workflows/ci.yml` come base e aggiungere un job di deploy quando il repository remoto Ã¨ pronto.
 
 ## Struttura
 
@@ -96,7 +96,7 @@ Le zone attualmente supportate sono:
 - `periferia_ovest`
 - `industriale`
 
-Se una via non è presente in `vie_jesi.csv`, B-Done usa automaticamente `residenziale`.
+Se una via non Ã¨ presente in `vie_jesi.csv`, B-Done usa automaticamente `residenziale`.
 
 ## Aggiornamento annuale calendario
 
@@ -123,3 +123,5 @@ Nota tecnica: notifiche affidabili con app chiusa richiedono Web Push e quindi u
 ## Dati demo
 
 I CSV inclusi sono dimostrativi e marcati come tali. Prima di usare B-Done pubblicamente bisogna sostituire il calendario con dati ufficiali verificati.
+
+

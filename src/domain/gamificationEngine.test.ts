@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import type { CollectionEvent } from "./models";
 import { getGamificationSummary, markMissionDone } from "./gamificationEngine";
 
@@ -26,4 +26,15 @@ describe("gamificationEngine", () => {
     expect(summary.streak).toBe(3);
     expect(summary.badges.find((badge) => badge.id === "perfect-week")?.unlocked).toBe(true);
   });
+  it("counts only completed missions for the current collection calendar", () => {
+    const summary = getGamificationSummary(
+      { completedDates: ["2026-07-01", "2026-07-02", "2026-07-03", "2026-07-04"] },
+      events,
+      "residenziale",
+      "2026-07-04",
+    );
+
+    expect(summary.completedMissions).toBe(3);
+  });
 });
+

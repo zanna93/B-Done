@@ -11,11 +11,11 @@
   Trophy,
   type LucideIcon,
 } from "lucide-react";
-import { useState } from "react";
-import type { GamificationSummary, IsoDate, MunicipalityDataset, UserPreferences, WasteType } from "../../domain/models";
+import { useRef, useState } from "react";
+import type { Badge, GamificationSummary, IsoDate, MunicipalityDataset, UserPreferences, WasteType } from "../../domain/models";
 import type { HomeSummary } from "../../domain/calendarEngine";
 import { buildReminderPreview, describeNotificationSupport, getNotificationCapabilities } from "../../services/notificationManager";
-import { addDays, formatDayLabel, todayIso } from "../../utils/date";
+import { formatDayLabel, todayIso } from "../../utils/date";
 import { formatWasteList, formatWasteName } from "../../domain/calendarEngine";
 import { WasteBadge } from "../../ui/components/WasteBadge";
 import { WasteVisualGroup } from "../../ui/components/WasteVisual";
@@ -75,17 +75,25 @@ export function HomeView({
   onOpenSettings,
 }: HomeViewProps) {
   const [guideWastes, setGuideWastes] = useState<WasteType[] | null>(null);
+  const [selectedBadgeId, setSelectedBadgeId] = useState<string | null>(null);
+  const badgeSectionRef = useRef<HTMLElement | null>(null);
   const capabilities = getNotificationCapabilities();
   const today = todayIso();
   const todayEvent = summary.today[0];
   const tomorrowEvent = summary.tomorrow[0];
   const featuredEvent = summary.featuredPickup ?? undefined;
-  const featuredTitle = getFeaturedTitle(featuredEvent?.date, today);
-  const nextPickupWastes = summary.nextPickup?.wasteTypes ?? [];
+  const featuredTitle = featuredEvent ? "Metti fuori" : "Oggi";
+  const followingPickup = summary.followingPickup;
+  const followingPickupWastes = followingPickup?.wasteTypes ?? [];
   const featuredWastes = featuredEvent?.wasteTypes ?? [];
   const isFeaturedGuideOpen = areSameWasteTypes(guideWastes, featuredWastes);
   const canComplete = summary.today.length > 0 && !completedToday;
   const reminderCta = preferences.notifications.mode === "none" ? "Attiva promemoria" : "Gestisci promemoria";
+  const selectedBadge = gamification.badges.find((badge) => badge.id === selectedBadgeId) ?? null;
+
+  function scrollToBadges() {
+    badgeSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   return (
     <div className="screen stack">
@@ -112,10 +120,10 @@ export function HomeView({
           <Flame aria-hidden="true" />
           Streak {gamification.streak}
         </span>
-        <span>
+        <button className="stat-chip" type="button" onClick={scrollToBadges}>
           <Trophy aria-hidden="true" />
-          {gamification.completedMissions} missioni
-        </span>
+          {formatMissionCount(gamification.completedMissions)}
+        </button>
       </div>
 
       <section className="panel next-panel">
@@ -124,17 +132,24 @@ export function HomeView({
           <div>
             <p className="eyebrow">Prossimo ritiro</p>
             <h2>
-              {summary.nextPickup
-                ? `${formatDayLabel(summary.nextPickup.date)} - ${formatWasteList(summary.nextPickup.wasteTypes)}`
-                : "Nessun ritiro trovato"}
+              {followingPickup
+                ? `${formatDayLabel(followingPickup.date)} - ${formatWasteList(followingPickup.wasteTypes)}`
+                : "Nessun altro ritiro trovato"}
             </h2>
           </div>
-          {nextPickupWastes.length > 0 && <WasteVisualGroup wasteTypes={nextPickupWastes} compact />}
+          {followingPickupWastes.length > 0 && <WasteVisualGroup wasteTypes={followingPickupWastes} compact />}
         </div>
-        {summary.countdownDays !== null && (
-          <div className="countdown" aria-label={`Mancano ${summary.countdownDays} giorni`}>
-            <strong>{summary.countdownDays}</strong>
-            <span>{summary.countdownDays === 1 ? "giorno" : "giorni"}</span>
+        {summary.followingCountdownDays !== null && (
+          <div className="countdown" aria-label={formatCountdownLabel(summary.followingCountdownDays)}>
+            {summary.followingCountdownDays === 0 ? (
+              <strong>oggi</strong>
+            ) : (
+              <>
+                <span>tra</span>
+                <strong>{summary.followingCountdownDays}</strong>
+                <span>{summary.followingCountdownDays === 1 ? "giorno" : "giorni"}</span>
+              </>
+            )}
           </div>
         )}
       </section>
@@ -143,7 +158,7 @@ export function HomeView({
         <div className="section-title">
           <Bell aria-hidden="true" />
           <div>
-            <p className="eyebrow">Promemoria</p>
+            <p className="eyebrow">Promemoria - in sviluppo</p>
             <h2>{buildReminderPreview(preferences.notifications, tomorrowEvent, todayEvent)}</h2>
           </div>
         </div>
@@ -154,7 +169,7 @@ export function HomeView({
         </button>
       </section>
 
-      <section className="panel">
+      <section className="panel" ref={badgeSectionRef}>
         <div className="section-title">
           <Trophy aria-hidden="true" />
           <div>
@@ -166,13 +181,22 @@ export function HomeView({
           {gamification.badges.map((badge) => {
             const BadgeIcon = BADGE_ICONS[badge.id] ?? Award;
             return (
-              <span className="badge-pill" data-unlocked={badge.unlocked} key={badge.id}>
+              <button
+                className="badge-pill"
+                data-unlocked={badge.unlocked}
+                data-selected={selectedBadgeId === badge.id}
+                key={badge.id}
+                type="button"
+                aria-pressed={selectedBadgeId === badge.id}
+                onClick={() => setSelectedBadgeId((current) => (current === badge.id ? null : badge.id))}
+              >
                 <BadgeIcon aria-hidden="true" />
                 {badge.name}
-              </span>
+              </button>
             );
           })}
         </div>
+        {selectedBadge && <BadgeDetail badge={selectedBadge} />}
         <p className="data-version">Dati {dataset.meta.version} - oggi {formatDayLabel(today)}</p>
       </section>
     </div>
@@ -184,10 +208,13 @@ function areSameWasteTypes(current: WasteType[] | null, next: WasteType[]): bool
   return current.length === next.length && current.every((waste, index) => waste === next[index]);
 }
 
-function getFeaturedTitle(date: IsoDate | undefined, today: IsoDate): string {
-  if (!date || date === today) return "Oggi";
-  if (date === addDays(today, 1)) return "Domani";
-  return "Prossimo";
+function formatMissionCount(count: number): string {
+  return count === 1 ? "1 missione" : `${count} missioni`;
+}
+
+function formatCountdownLabel(days: number): string {
+  if (days === 0) return "Oggi";
+  return `Tra ${days} ${days === 1 ? "giorno" : "giorni"}`;
 }
 
 function CollectionCard({
@@ -214,7 +241,10 @@ function CollectionCard({
   return (
     <article className={`collection-card ${primary ? "collection-card--primary" : ""}`} data-waste={tone}>
       <div className="collection-card__topline">
-        <p className="eyebrow collection-card__eyebrow"><span>{title}</span>{date && <time className="collection-card__date" dateTime={date}>{formatDayLabel(date)}</time>}</p>
+        <p className="eyebrow collection-card__eyebrow">
+          <span>{title}</span>
+          {date && <time className="collection-card__date" dateTime={date}>{formatDayLabel(date)}</time>}
+        </p>
         {wasteTypes.length > 0 && (
           <button
             className={`help-dot ${guideOpen ? "help-dot--active" : ""}`}
@@ -295,7 +325,18 @@ function WasteGuide({ wasteTypes, onClose }: { wasteTypes: WasteType[]; onClose:
   );
 }
 
+function BadgeDetail({ badge }: { badge: Badge }) {
+  const BadgeIcon = BADGE_ICONS[badge.id] ?? Award;
 
-
-
+  return (
+    <div className="badge-detail" data-unlocked={badge.unlocked} aria-live="polite">
+      <BadgeIcon aria-hidden="true" />
+      <div>
+        <strong>{badge.name}</strong>
+        <p>{badge.description}</p>
+        {!badge.unlocked && <small>Continua con le missioni: ci sei quasi.</small>}
+      </div>
+    </div>
+  );
+}
 

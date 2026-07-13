@@ -1,4 +1,4 @@
-import type { Badge, CollectionEvent, GamificationState, GamificationSummary, IsoDate, ZoneId } from "./models";
+﻿import type { Badge, CollectionEvent, GamificationState, GamificationSummary, IsoDate, ZoneId } from "./models";
 import { addDays, daysBetween } from "../utils/date";
 
 export function markMissionDone(state: GamificationState, date: IsoDate): GamificationState {
@@ -17,7 +17,7 @@ export function getGamificationSummary(
     new Set(events.filter((event) => event.zone === zone && event.date <= today).map((event) => event.date)),
   ).sort();
   const streak = calculateStreak(collectionDates, completed, today);
-  const completedMissions = state.completedDates.length;
+  const completedMissions = collectionDates.filter((date) => completed.has(date)).length;
 
   return {
     streak,
@@ -87,3 +87,5 @@ export function getCurrentWeekWindow(today: IsoDate): { start: IsoDate; end: Iso
   const start = addDays(today, offset);
   return { start, end: addDays(start, 6) };
 }
+
+

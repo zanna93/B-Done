@@ -1,4 +1,4 @@
-import { Bell, Contrast, Info, MapPin, RotateCcw, Send, Type } from "lucide-react";
+﻿import { Bell, CalendarPlus, Contrast, Info, MapPin, RotateCcw, Send, Type } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { MunicipalityDataset, NotificationMode, UserPreferences, ZoneId } from "../../domain/models";
 import { resolveStreet, suggestStreets } from "../../domain/streetResolver";
@@ -8,6 +8,7 @@ import {
   requestNotificationPermission,
   showTestNotification,
 } from "../../services/notificationManager";
+import { downloadReminderCalendar } from "../../services/calendarExport";
 import { zoneLabel } from "../../services/storage";
 
 interface SettingsViewProps {
@@ -21,6 +22,7 @@ export function SettingsView({ dataset, preferences, onChange, onReset }: Settin
   const [street, setStreet] = useState(preferences.street);
   const [manualZone, setManualZone] = useState<ZoneId>(preferences.zone);
   const [testMessage, setTestMessage] = useState("");
+  const [calendarMessage, setCalendarMessage] = useState("");
   const suggestions = useMemo(() => suggestStreets(street, dataset.streets), [dataset.streets, street]);
   const streetResolution = useMemo(() => resolveStreet(street, dataset.streets), [dataset.streets, street]);
   const capabilities = getNotificationCapabilities();
@@ -45,6 +47,11 @@ export function SettingsView({ dataset, preferences, onChange, onReset }: Settin
   async function handleTestNotification() {
     const shown = await showTestNotification();
     setTestMessage(shown ? "Notifica inviata." : "Permesso notifiche non concesso.");
+  }
+
+  function handleCalendarExport() {
+    const result = downloadReminderCalendar(dataset.collections, preferences);
+    setCalendarMessage(result.message);
   }
 
   function resetWithConfirm() {
@@ -153,9 +160,17 @@ export function SettingsView({ dataset, preferences, onChange, onReset }: Settin
         </div>
         <button className="secondary-action" type="button" onClick={handleTestNotification}>
           <Send aria-hidden="true" />
-          Prova notifica
+          Prova notifica immediata
         </button>
         {testMessage && <p className="muted">{testMessage}</p>}
+        <button className="secondary-action" type="button" onClick={handleCalendarExport}>
+          <CalendarPlus aria-hidden="true" />
+          Scarica calendario promemoria
+        </button>
+        <p className="muted">
+          Per avvisi affidabili anche quando B-Done e chiusa, aggiungi questo file al calendario del telefono.
+        </p>
+        {calendarMessage && <p className="muted">{calendarMessage}</p>}
       </section>
 
       <section className="panel stack">

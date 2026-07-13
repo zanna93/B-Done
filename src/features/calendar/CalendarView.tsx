@@ -1,4 +1,4 @@
-import { Ban, CalendarDays, Filter } from "lucide-react";
+﻿import { Ban, CalendarDays, Filter } from "lucide-react";
 import { useMemo, useState } from "react";
 import { formatWasteList } from "../../domain/calendarEngine";
 import { getUpcomingEvents } from "../../domain/calendarEngine";
@@ -23,9 +23,10 @@ interface CalendarViewProps {
 
 type WasteFilter = "all" | WasteType;
 
-type CalendarListItem =
+export type CalendarListItem =
   | { kind: "collection"; date: IsoDate; event: CollectionEvent }
-  | { kind: "pause"; date: IsoDate; pause: CalendarPauseDay };
+  | { kind: "pause"; date: IsoDate; pause: CalendarPauseDay }
+  | { kind: "empty"; date: IsoDate };
 
 export function CalendarView({ events, municipality, zone, today }: CalendarViewProps) {
   const [filter, setFilter] = useState<WasteFilter>("all");
@@ -72,6 +73,10 @@ export function CalendarView({ events, municipality, zone, today }: CalendarView
             return <CalendarPauseItem key={`pause-${item.date}`} pause={item.pause} />;
           }
 
+          if (item.kind === "empty") {
+            return <CalendarEmptyItem key={`empty-${item.date}`} date={item.date} />;
+          }
+
           const isDoublePickup = item.event.isDoublePickup || item.event.wasteTypes.length > 1;
           const tone = isDoublePickup ? "mixed" : item.event.wasteTypes[0];
           const visibleNote = getVisibleEventNote(item.event, isDoublePickup);
@@ -101,7 +106,8 @@ function getVisibleEventNote(event: CollectionEvent, isDoublePickup: boolean): s
   if (isDoublePickup && note.toLowerCase() === "doppio ritiro") return "";
   return note;
 }
-function buildCalendarItems(
+
+export function buildCalendarItems(
   events: CollectionEvent[],
   municipality: MunicipalityId,
   zone: ZoneId,
@@ -123,7 +129,10 @@ function buildCalendarItems(
     const pause = getCalendarPauseDay(date, municipality);
     if (pause) {
       items.push({ kind: "pause", date, pause });
+      continue;
     }
+
+    items.push({ kind: "empty", date });
   }
 
   return items;
@@ -138,16 +147,30 @@ function CalendarPauseItem({ pause }: { pause: CalendarPauseDay }) {
   return (
     <article className="calendar-item calendar-item--pause" data-reason={pause.reason}>
       <time dateTime={pause.date}>{formatDayLabel(pause.date)}</time>
-      <div className="calendar-item__main calendar-item__main--pause">
-        <span className="calendar-pause-icon" aria-hidden="true">
-          <Ban />
-        </span>
-        <div>
-          <h2>Nessuna raccolta</h2>
-          <p className="muted">{detail}</p>
-        </div>
-      </div>
+      <NoCollectionContent detail={detail} />
     </article>
   );
 }
 
+function CalendarEmptyItem({ date }: { date: IsoDate }) {
+  return (
+    <article className="calendar-item calendar-item--pause" data-reason="ordinary">
+      <time dateTime={date}>{formatDayLabel(date)}</time>
+      <NoCollectionContent detail="Niente da esporre." />
+    </article>
+  );
+}
+
+function NoCollectionContent({ detail }: { detail: string }) {
+  return (
+    <div className="calendar-item__main calendar-item__main--pause">
+      <span className="calendar-pause-icon" aria-hidden="true">
+        <Ban />
+      </span>
+      <div>
+        <h2>Nessuna raccolta</h2>
+        <p className="muted">{detail}</p>
+      </div>
+    </div>
+  );
+}
